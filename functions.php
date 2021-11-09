@@ -7,9 +7,9 @@
  * @package ARE_Visual
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'AREVISUAL_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'AREVISUAL_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'arevisual_setup' ) ) :
@@ -140,11 +140,11 @@ add_action( 'widgets_init', 'arevisual_widgets_init' );
  * Enqueue scripts and styles.
  */
 function arevisual_scripts() {
-	wp_enqueue_style( 'arevisual-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'arevisual-style', get_stylesheet_uri(), array(), AREVISUAL_VERSION );
 	wp_style_add_data( 'arevisual-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'arevisual-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'modal', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), null, true );
+	wp_enqueue_script( 'arevisual-navigation', get_template_directory_uri() . '/js/navigation.js', array(), AREVISUAL_VERSION, true );
+	wp_enqueue_script( 'modal', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.js', array(), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
