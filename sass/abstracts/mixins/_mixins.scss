@@ -9,6 +9,13 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin xs {
+	@media (max-width: 600px) { 
+		@content; 
+	}
+}
+
 @mixin sm {
 	@media (max-width: 600px) { 
 		@content; 
