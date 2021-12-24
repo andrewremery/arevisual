@@ -59,7 +59,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
- @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+@import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
 // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
 @import "layouts/archive";
 @import "layouts/homepage";
@@ -105,3 +105,51 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+.logo-disable {
+	display: none;
+	visibility: hidden;
+}
+
+#hgroup-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+#top-navigation-bar {
+	background: #21759b;
+	border: none;
+}
+.sf-menu li {
+	background: transparent;
+}
+#topbar ul li a {
+	color: yellow;
+	text-shadow: none;
+}
+a.comment-reply-link,
+a.button,
+input[type="submit"],
+input[type="button"],
+ul.button-nav li a,
+div.generic-button a,
+ul.button-nav li a {
+	background: #21759b;
+}
+
+.articles li h3 a {
+	background: #21759b;
+}
+
+.articles li h3 a:hover {
+	background: #21759b;
+}
+
+.articles li {
+	text-align: center;
+	border-radius: 10px;
+}
+.withthumb img {
+	width: 75%;
+	height: auto;
+}

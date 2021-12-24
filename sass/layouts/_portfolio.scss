@@ -41,6 +41,15 @@
 			background: $color__text-main;
 			color: #fff;
 			text-align: center;
+			@include xs {
+				padding: 0;
+			}
+			.modal-title {
+				@include xs {
+					font-size: 1em;
+					padding: 0;
+				}
+			}
 			.modal-skills-list {
 				padding: 1rem;
 				.skills-list-heading {
